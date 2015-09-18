@@ -1,0 +1,13 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start": "http-server -a localhost"
+  },
+  "devDependencies": {
+    "bower": "^1.5.2",
+    "http-server": "^0.8.0"
+  }
+}

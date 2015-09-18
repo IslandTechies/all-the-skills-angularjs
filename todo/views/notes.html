@@ -1,0 +1,14 @@
+<h1 class="title">Dem Notes</h1>
+
+<div class="notes">
+  <div class="note" ng-repeat="note in notes" ng-class="{ 'completed': note.completed }">
+    <div class="title pure-g">
+      <div class="pure-u-2-24 pure-u-md-1-24"><input type="checkbox" ng-model="note.completed"></div>
+      <div class="pure-u-20-24 pure-u-md-21-24"><strong>{{ note.title}}</strong></div>
+      <div class="pure-u-2-24 pure-u-md-2-24">
+        <a ng-click="removeNote(note)"><i class="fa fa-trash"></i></a>
+      </div>
+    </div>
+    <div class="description">{{ note.description }}</div>
+  </div>
+</div>

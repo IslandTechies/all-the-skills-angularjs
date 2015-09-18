@@ -1,0 +1,28 @@
+<form class="pure-form pure-form-stacked" name="noteForm" ng-submit="noteSave()">
+  <!-- Title -->
+  <div class="pure-control-group">
+    <label for="title">Title</label>
+    <input id="title"
+           type="text"
+           name="title"
+           placeholder="Title"
+           required
+           ng-model="note.title">
+  </div>
+
+  <!-- Description -->
+  <div class="pure-control-group">
+    <label for="description">Description</label>
+    <textarea id="description"
+              name="description"
+              cols="30"
+              rows="10"
+              placeholder="Description"
+              ng-model="note.description"></textarea>
+  </div>
+
+  <button type="submit" class="pure-button pure-button-primary">
+    <i class="fa fa-save"></i>
+    Save
+  </button>
+</form>

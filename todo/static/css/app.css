@@ -1,0 +1,120 @@
+.pure-g > div {
+  box-sizing: border-box;
+}
+
+.l-box {
+  padding: 1em;
+}
+
+#note {
+  background-color: #191818;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  z-index: 1000;
+  overflow-y: auto;
+  display: none;
+}
+
+#note.active {
+  display: block;
+}
+
+#note input,
+#note textarea {
+  color: #000;
+}
+
+#note textarea {
+  width: 90%;
+}
+
+.form-link {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 10px;
+  z-index: 10;
+  width: 2em;
+  height: auto;
+  padding: 2.1em 1.6em;
+}
+
+/**
+ * This needs to be dynamic or fix through CSS.
+ */
+.form-link.active {
+  left: 270px;
+}
+
+.form-link:hover,
+.form-link:focus {
+  background: #000;
+}
+
+.form-link span {
+  position: relative;
+  display: block;
+}
+
+.form-link span,
+.form-link span:before,
+.form-link span:after {
+  background-color: #fff;
+  width: 100%;
+  height: 0.2em;
+}
+
+.form-link span:before,
+.form-link span:after {
+  position: absolute;
+  margin-top: -0.6em;
+  content: " ";
+}
+
+.form-link span:after {
+  margin-top: 0.6em;
+}
+
+h1.title {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.notes .note {
+  padding: 0 0 10px 0;
+}
+
+.notes .note.completed {
+  text-decoration: line-through;
+}
+
+.notes .description {
+  padding: 10px 0 0 0;
+  margin-left: 28px;
+}
+
+@media (min-width: 60em) {
+  #note {
+    display: block;
+  }
+
+  .form-link {
+    display: none;
+  }
+
+  #note textarea {
+    width: auto;
+  }
+
+  #notes {
+    margin-left: 350px;
+  }
+
+  .notes .description {
+    margin-left: 38px;
+  }
+}
